@@ -1,0 +1,1 @@
+En esta carpeta meteré los distintos proyectos que hagamos en el trimestre
