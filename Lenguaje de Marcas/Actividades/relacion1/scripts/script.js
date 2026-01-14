@@ -109,3 +109,42 @@ function ej5() {
     }
   } while (opcion != 6);
 }
+function ej6(){
+  let array = []
+  let elementos = 20
+  for(let i = 0 ; i<elementos ; i++)
+    array[i]= Math.floor(Math.random() *(20- 10 + 1)) + 10;
+
+  let mayor15 = 0
+  let menor15 = 0
+  let igual15 = 0
+
+  for(let i = 0 ; i<elementos ; i++){
+    if(array[i] > 15)
+      mayor15++
+    else
+      if(array[i]< 15)
+        menor15++
+      else
+        igual15++
+  }
+  alert("Numeros mayores a 15: " + mayor15 +"\n" + "Numeros menores a 15: " + menor15 + "\n"+ "Igual a 15: " + igual15)
+}
+function ej7(){
+  let linea
+  linea = prompt("Introduzca numeros separados por un espacio")
+  let numeros
+  numeros = linea.split(" ")
+  let par = []
+  let impar = []
+  for(let i = 0 ; i<numeros.length ; i++){
+    if(numeros[i] % 2 == 0){
+      par.push(numeros[i])
+    }else 
+      impar.push(numeros[i])
+  }
+
+  alert("Numeros pares: " + par + "\n" + "Numeros Impares: " + impar )
+
+
+}
