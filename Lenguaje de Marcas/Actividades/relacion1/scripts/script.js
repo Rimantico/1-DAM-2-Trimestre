@@ -1,3 +1,5 @@
+
+// Para que cada boton funcione he englobado los ejercicios en funciones para que al pulsar cada boton se ejecute todo lo que queramos
 function ej1() {
   alert(
     "Soy Juan Gómez Ruiz y estoy cursando 1ºDAM y me gustaria trabajar de programador o de técnico informático "
@@ -6,7 +8,7 @@ function ej1() {
 function ej2() {
   let suma = 0;
   let numero;
-
+  // Como podemos observar las funciones y las estructuras son bastantes parecidas a Java
   do {
     numero = Number(prompt("Introduce un número (0 para terminar:)"));
     suma += numero;
