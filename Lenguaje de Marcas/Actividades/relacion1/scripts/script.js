@@ -44,3 +44,68 @@ function ej4() {
     }
   } else alert("Introduzca una nota válida");
 }
+function ej5() {
+  let array = [];
+  let opcion;
+  do {
+    opcion = Number(
+      prompt(
+        "--- Menu de opciones ---\n1. Introducir los 10 Digitos\n2. Mostrar la Suma\n3. Mostrar el mayor valor\n4. Mostrar el menor valor\n5. Media de los valores\n6. Salir"
+      )
+    );
+    switch (opcion) {
+      case 1:
+        let entrada;
+        for (let i = 0; i < 10; i++) {
+          entrada = Number(
+            prompt(
+              "--- Introducción de valores ---\nPor favor, Introduzca el " +
+                (i + 1) +
+                "º valor:"
+            )
+          );
+          array.push(entrada);
+        }
+        alert("Los numeros del array son: " + array);
+        break;
+      case 2:
+        let suma = 0;
+        for (let i = 0; i < 10; i++) {
+          suma += array[i];
+        }
+        alert("El resultado de la Suma es de " + suma);
+        break;
+      case 3:
+        let mayor = array[0];
+
+        for (let i = 0; i < 10; i++) {
+          if (mayor < array[i]) {
+            mayor = array[i];
+          }
+        }
+        alert("El numero mas grande de nuestro array es: " + mayor);
+        break;
+      case 4:
+        let menor = array[0];
+
+        for (let i = 0; i < 10; i++) {
+          if (menor > array[i]) {
+            menor = array[i];
+          }
+        }
+        alert("El numero mas grande de nuestro array es: " + menor);
+        break;
+      case 5:
+        let media = 0;
+        for (let i = 0; i < 10; i++) {
+          media += array[i];
+        }
+        media = media /10
+
+        alert("La media es de " + media)
+        break
+      case 6:
+        alert("Saliendo del programa...");
+    }
+  } while (opcion != 6);
+}
