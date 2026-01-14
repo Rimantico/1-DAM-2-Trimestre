@@ -1,3 +1,4 @@
+/* CSS Básico para que la página no quede mal */
 *{
     margin: 0;
     padding: 0;
@@ -21,6 +22,7 @@ main{
     height: 70vh;
     overflow: auto;
 }
+/* Clase botones para darle un pequeño formato a nuestros botones */
 .botones{
     border-radius: 2px;
     background-color: #E4B7E5;
