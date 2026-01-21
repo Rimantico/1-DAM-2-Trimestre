@@ -6,6 +6,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="lib" path="lib/ActividadExportada.jar"/>
+	<classpathentry kind="lib" path="lib/ActividadesRA2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
