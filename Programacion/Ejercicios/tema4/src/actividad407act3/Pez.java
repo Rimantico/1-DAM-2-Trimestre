@@ -10,7 +10,7 @@ public class Pez  extends Animal{
 	
 	// Constructor
 	
-	public Pez(String nombre, int edad, char sexo, int energia, int peso, String tipoAgua) {
+	public Pez(String nombre, int edad, Sexo sexo, int energia, int peso, String tipoAgua) {
 		super(nombre,edad,sexo,energia,peso);
 		this.tipoAgua = tipoAgua;
 		this.tieneEscamas = tieneEscamas;

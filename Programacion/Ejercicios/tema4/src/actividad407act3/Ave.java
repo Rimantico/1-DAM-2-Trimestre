@@ -10,7 +10,7 @@ public class Ave extends Animal{
 	
 	//  Constructor
 	
-	public Ave(String nombre, int edad, char sexo, double peso ,int energia, boolean vuela, double envergaduraAlas, boolean poneHuevos) {
+	public Ave(String nombre, int edad, Sexo sexo, double peso ,int energia, boolean vuela, double envergaduraAlas, boolean poneHuevos) {
 		super(nombre,edad,sexo,peso, energia);
 		this.vuela = vuela;
 		this.envergaduraAlas = envergaduraAlas;

@@ -2,17 +2,17 @@ package actividad407act3;
 
 public class Animal {
 	
-	// Atributos
+	// Attributes
 	
 	protected String nombre;
 	protected int edad;
-	protected char sexo;
+	protected Sexo sexo;
 	protected double peso;
 	protected int energia;
 	
 	// Constructor
 	
-	public Animal(String nombre, int edad, char sexo, double peso , int energia) {
+	public Animal(String nombre, int edad, Sexo sexo, double peso , int energia) {
 		this.nombre = nombre;
 		this.edad = edad;
 		this.sexo = sexo;
@@ -22,7 +22,7 @@ public class Animal {
 	
 	// Methods
 	
-	public enum sexo{
+	public enum Sexo{
 		H,
 		M
 	}

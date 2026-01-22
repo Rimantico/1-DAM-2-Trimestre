@@ -10,7 +10,7 @@ public class Mamifero extends Animal {
 	
 	// Constructor
 	
-	public Mamifero(String nombre, int edad, char sexo, double peso,int energia, boolean tienePelo, boolean amamanta, int mesesGestacion) {
+	public Mamifero(String nombre, int edad, Sexo sexo, double peso,int energia, boolean tienePelo, boolean amamanta, int mesesGestacion) {
 		super(nombre, edad, sexo, peso, energia);
 		this.tienePelo = tienePelo;
 		this.amamanta = amamanta;
