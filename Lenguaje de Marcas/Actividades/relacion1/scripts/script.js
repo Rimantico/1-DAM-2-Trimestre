@@ -1,4 +1,3 @@
-
 // Para que cada boton funcione he englobado los ejercicios en funciones para que al pulsar cada boton se ejecute todo lo que queramos
 function ej1() {
   alert(
@@ -102,51 +101,71 @@ function ej5() {
         for (let i = 0; i < 10; i++) {
           media += array[i];
         }
-        media = media /10
+        media = media / 10;
 
-        alert("La media es de " + media)
-        break
+        alert("La media es de " + media);
+        break;
       case 6:
         alert("Saliendo del programa...");
     }
   } while (opcion != 6);
 }
-function ej6(){
-  let array = []
-  let elementos = 20
-  for(let i = 0 ; i<elementos ; i++)
-    array[i]= Math.floor(Math.random() *(20- 10 + 1)) + 10;
+function ej6() {
+  let array = [];
+  let elementos = 20;
+  for (let i = 0; i < elementos; i++)
+    array[i] = Math.floor(Math.random() * (20 - 10 + 1)) + 10;
 
-  let mayor15 = 0
-  let menor15 = 0
-  let igual15 = 0
+  let mayor15 = 0;
+  let menor15 = 0;
+  let igual15 = 0;
 
-  for(let i = 0 ; i<elementos ; i++){
-    if(array[i] > 15)
-      mayor15++
-    else
-      if(array[i]< 15)
-        menor15++
-      else
-        igual15++
+  for (let i = 0; i < elementos; i++) {
+    if (array[i] > 15) mayor15++;
+    else if (array[i] < 15) menor15++;
+    else igual15++;
   }
-  alert("Numeros mayores a 15: " + mayor15 +"\n" + "Numeros menores a 15: " + menor15 + "\n"+ "Igual a 15: " + igual15)
+  alert(
+    "Numeros mayores a 15: " +
+      mayor15 +
+      "\n" +
+      "Numeros menores a 15: " +
+      menor15 +
+      "\n" +
+      "Igual a 15: " +
+      igual15
+  );
 }
-function ej7(){
-  let linea
-  linea = prompt("Introduzca numeros separados por un espacio")
-  let numeros
-  numeros = linea.split(" ")
-  let par = []
-  let impar = []
-  for(let i = 0 ; i<numeros.length ; i++){
-    if(numeros[i] % 2 == 0){
-      par.push(numeros[i])
-    }else 
-      impar.push(numeros[i])
-  }
+function ej7() {
+let valorEntrada = []
 
-  alert("Numeros pares: " + par + "\n" + "Numeros Impares: " + impar )
+valorEntrada = prompt("Introduzca  valores numéricos separados por espacios en blanco: ")
 
+let arrayAuxiliar = new Array()
+let contadorAuxiliar = 0;
+
+for (let i=0; i<valorEntrada.length; i++){
+    if (valorEntrada[i] != " "){
+        if (arrayAuxiliar[contadorAuxiliar] == undefined)
+            arrayAuxiliar[contadorAuxiliar] = valorEntrada[i]
+        else 
+            arrayAuxiliar[contadorAuxiliar] += valorEntrada[i]
+    }else{
+        contadorAuxiliar++
+    }
+}
+
+let pares = []
+let impares = []
+
+
+for (let i=0; i<arrayAuxiliar.length; i++){
+    if (arrayAuxiliar[i] % 2 == 0)
+        pares.push(arrayAuxiliar[i])
+    else 
+        impares.push(arrayAuxiliar[i])
+}
+
+alert (`Los pares son: ${pares}  \nLos impares: ${impares} `)
 
 }
