@@ -1,0 +1,4 @@
+INDEX VERSION 1.134+C:\Users\jgomr\Desktop\1-DAM-2-Trimestre\Programacion\Examenes\.metadata\.plugins\org.eclipse.jdt.core
+524495999.index
+488265409.index
+1865797976.index

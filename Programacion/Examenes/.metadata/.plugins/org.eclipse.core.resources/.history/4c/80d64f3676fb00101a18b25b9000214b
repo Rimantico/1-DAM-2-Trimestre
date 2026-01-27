@@ -1,0 +1,57 @@
+package recuperaciontema3;
+
+import java.util.Scanner;
+
+public class Cine {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+
+		// Hecho por: Juan Gómez Ruiz
+
+		// Variables y Arrays
+		int opcionMenu;
+		int[][] sala = null;
+
+		System.out.println("--- Cine ---\nIntroduzca una opcion:");
+		
+
+		do {
+			System.out.println(
+					"0- Salir\n1- Crear sala\n2- Mostrar mapa de butacas\n3- Reservar Butaca\n4- Cancelar Reserva\n5- Estadísticas de ocupación(por fila y total)");
+			opcionMenu = Integer.parseInt(sc.nextLine());
+			switch (opcionMenu) {
+			case 0:
+				System.out.println("Saliendo del programa");
+				break;
+			case 1:
+				System.out.println("La sala ha sido creada");
+				sala = new int[10][8];
+				for(int i = 0 ; i<sala.length ; i++)
+					for(int j = 0 ; j<sala[i].length ; j++) {
+						sala[i][j] = 0;
+					}
+				break;
+			case 2:
+				for(int i = 0 ; i<sala.length ; i++)
+					for(int j = 0 ; j<sala[i].length ; j++) {
+						System.out.println(sala[i][j]);
+						if(j == 7)
+							System.out.println(" ");
+					}
+			case 3:
+
+			case 4:
+
+			case 5:
+
+			default:
+				System.out.println("Has introducido un numero invalido");
+			}
+		} while (opcionMenu != 0);
+
+		sc.close();
+	}
+
+}

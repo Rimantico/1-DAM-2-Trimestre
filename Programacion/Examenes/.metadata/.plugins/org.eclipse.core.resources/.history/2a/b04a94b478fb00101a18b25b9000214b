@@ -1,0 +1,83 @@
+package recuperaciontema3;
+
+import java.util.Scanner;
+
+public class Cine {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+
+		// Hecho por: Juan Gómez Ruiz
+
+		// Variables y Arrays
+		int opcionMenu;
+		int[][] sala = null;
+		int fila;
+		int columna;
+
+		System.out.println("--- Cine ---\nIntroduzca una opcion:");
+
+		do {
+			System.out.println(
+					"0- Salir\n1- Crear sala\n2- Mostrar mapa de butacas\n3- Reservar Butaca\n4- Cancelar Reserva\n5- Estadísticas de ocupación(por fila y total)");
+			opcionMenu = Integer.parseInt(sc.nextLine());
+			switch (opcionMenu) {
+			case 0:
+				System.out.println("Saliendo del programa");
+				break;
+			case 1:
+				System.out.println("La sala ha sido creada");
+				sala = new int[10][8];
+				for (int i = 0; i < sala.length; i++)
+					for (int j = 0; j < sala[i].length; j++) {
+						sala[i][j] = 0;
+					}
+				break;
+			case 2:
+				for (int i = 0; i < sala.length; i++) {
+					
+					for (int j = 0; j < sala[i].length; j++) {
+						while(j == 0) {
+							System.out.println("Fila " + i + ": " +);
+						}
+						System.out.print(sala[i][j] + "");
+					}
+					System.out.println();
+				}
+				break;
+			case 3:
+				System.out.println("Dime la fila");
+				fila = Integer.parseInt(sc.nextLine());
+				System.out.println("Dime la columna");
+				columna = Integer.parseInt(sc.nextLine());
+
+				if (sala[fila][columna] == 0) {
+					sala[fila][columna] = 1;
+					System.out.println("Has ocupado esta butaca");
+				} else
+					System.out.println("Esta butaca esta ocupada");
+				break;
+			case 4:
+				System.out.println("Dime la fila");
+				fila = Integer.parseInt(sc.nextLine());
+				System.out.println("Dime la columna");
+				columna = Integer.parseInt(sc.nextLine());
+
+				if (sala[fila][columna] == 1) {
+					sala[fila][columna] = 0;
+					System.out.println("Ya no ocupas esta butaca");
+				} else
+					System.out.println("Esta butaca no estaba ocupada");
+				break;
+			case 5:
+
+			default:
+				System.out.println("Has introducido un numero invalido");
+			}
+		} while (opcionMenu != 0);
+
+		sc.close();
+	}
+
+}
