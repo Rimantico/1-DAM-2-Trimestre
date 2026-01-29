@@ -49,7 +49,7 @@ public class Main {
 				break;
 			case 2:
 				vecesSalida++;
-				if(vecesSalida > 2) {
+				if(vecesSalida >= 2) {
 					System.out.println("No puedes salir mas de dos veces del trabajo");
 				}else
 					if(vecesSalida == 1) {
@@ -65,7 +65,7 @@ public class Main {
 					}
 				break;
 			}
-		}while(vecesEntrada < 2 && vecesSalida < 2);
+		}while(vecesEntrada != 2 || vecesSalida != 2);
 		
 		sc.close();
 	}
