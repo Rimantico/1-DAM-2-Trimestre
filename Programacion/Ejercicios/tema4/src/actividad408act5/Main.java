@@ -39,7 +39,7 @@ public class Main {
 		Duration turno1;
 		Duration turno2;
 		long horasTurno1 = 0;
-		long minutosTurno1 = 0 ;
+		long minutosTurno1 = 0;
 		long horasTurno2 = 0;
 		long minutosTurno2 = 0;
 
@@ -90,60 +90,57 @@ public class Main {
 		// Comprobación de las horas realizadas
 
 		System.out.println("Turno de mañana");
-		if(salida1.isAfter(entrada1)) {
-			turno1 = Duration.between(entrada1, salida1);			
-			 horasTurno1 = turno1.toHours();
-			 minutosTurno1 = turno1.toMinutes() % 60;
-		}
-		else
-			System.out.println("No puedes introducir a a");
-
-		
+		if (salida1.isAfter(entrada1)) {
+			turno1 = Duration.between(entrada1, salida1);
+			horasTurno1 = turno1.toHours();
+			minutosTurno1 = turno1.toMinutes() % 60;
+		} else
+			System.out.println("No puedes salir una hora mas tempreana que la de entrada");
 
 		System.out.println("Ha echado un total de " + horasTurno1 + "horas  y " + minutosTurno1 + " minutos");
 
 		System.out.println("Turno de tarde");
 
-		turno2 = Duration.between(entrada2, salida2);
-
-		 horasTurno2 = turno2.toHours();
-		 minutosTurno2 = turno2.toMinutes() % 60;
+		if (salida2.isAfter(entrada2)) {
+			turno2 = Duration.between(entrada2, salida2);
+			horasTurno2 = turno2.toHours();
+			minutosTurno2 = turno2.toMinutes() % 60;
+		}else
+			System.out.println("No puedes salir una hora mas temprana que la de entrada");
 
 		System.out.println("Ha echado un total de " + horasTurno2 + "horas y " + minutosTurno2 + " minutos");
 
 		// Suma de las horas
-
+		// Suma de las horas
 		long totalHoras = horasTurno1 + horasTurno2;
 		long totalMinutos = minutosTurno1 + minutosTurno2;
 
-		// Comprobacion y suma de dinero
+		// Ajuste de minutos a horas
+		if (totalMinutos >= 60) {
+		    totalHoras += totalMinutos / 60;
+		    totalMinutos = totalMinutos % 60;
+		}
 
+		// Cálculo del salario
 		int salarioPercibir;
 
-		if (totalMinutos >= 60) {
-			totalHoras++;
-			totalMinutos = totalMinutos - 60;
-		}
-
 		if (totalHoras == 5) {
-			System.out.println("Horas semanales completadas");
-			salarioPercibir = SALARIOBASE;
-		} else {
-			salarioPercibir = SALARIOBASE;
-			System.out.println("No has cumplido las horas establecidas se te restará dinero de tu salario semanal");
-			for (long i = totalHoras; i <= 5; i++)
-				contador++;
-			salarioPercibir = salarioPercibir - (contador * HORAEXTRA);
+		    System.out.println("Horas semanales completadas");
+		    salarioPercibir = SALARIOBASE;
 
+		} else if (totalHoras < 5) {
+		    long horasFaltantes = 5 - totalHoras;
+		    System.out.println("No has cumplido las horas establecidas");
+		    salarioPercibir = SALARIOBASE - (int)(horasFaltantes * HORAEXTRA);
+
+		} else { // totalHoras > 5
+		    long horasExtra = totalHoras - 5;
+		    System.out.println("Has realizado horas extra");
+		    salarioPercibir = SALARIOBASE + (int)(horasExtra * HORAEXTRA);
 		}
 
-		if (totalHoras > 5) {
-			long horasExtra = totalHoras - 5;
-			System.out.println("Percibe una paga extra");
-			for (long i = totalHoras; i <= horasExtra; i++)
-				contador++;
-			salarioPercibir = salarioPercibir + (contador * HORAEXTRA);
-		}
+		System.out.println("El salario en total es: " + salarioPercibir);
+
 
 	}
 
