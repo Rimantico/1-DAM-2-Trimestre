@@ -1,4 +1,4 @@
-package actividad603;
+package actividad603act1;
 
 public class Libro {
 	
