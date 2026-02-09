@@ -1,20 +1,24 @@
 package actividad603act2;
 
-public class Revista extends Publicacion{
-	
+public class Revista extends Publicacion {
+
 	// Attributes
-	
+
+	private int numero;
+
 	// Constructor
-	
-	public Revista(String titulo , String autor, int anoPublicacion) {
-		super(titulo, autor, anoPublicacion);
+
+	public Revista(String titulo, int anoPublicacion, int numero) {
+		super(titulo, titulo, anoPublicacion);
+		this.numero = numero;
 	}
-	
+
 	// Methods
-	
+
 	@Override
 	public String toString() {
-		return "Titulo: " + titulo + "\n" + "Autor: " + autor + "\n" + "Año Publicacion: " + anoPublicacion;
+		return "REVISTA" + "\n" + "Titulo: " + titulo + "\n" + "Numero de la revista: " + numero + "\n"
+				+ "Año Publicacion: " + anoPublicacion;
 	}
 
 }
