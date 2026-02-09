@@ -1,4 +1,4 @@
-package actividad603act2;
+package actividad603b;
 
 public class Libro  extends Publicacion{
 	

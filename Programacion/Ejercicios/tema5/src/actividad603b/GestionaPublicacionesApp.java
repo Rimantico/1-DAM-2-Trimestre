@@ -1,10 +1,10 @@
-package actividad603act2;
+package actividad603b;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import actividad603act1.Libro;
+import actividad603a.Libro;
 
 public class GestionaPublicacionesApp {
 

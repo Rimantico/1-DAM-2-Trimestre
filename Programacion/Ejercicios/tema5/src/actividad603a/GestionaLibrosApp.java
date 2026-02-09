@@ -1,4 +1,4 @@
-package actividad603act1;
+package actividad603a;
 
 import java.util.ArrayList;
 import java.util.List;
