@@ -55,7 +55,7 @@ public class GestionaLibrosApp {
 		System.out.println("AGREGAR LIBRO");
 		System.out.println("-------------");
 		System.out.print("Introduzca el nombre del libro: ");
-		String nombreLibro = sc.nextLine();
+		String nombreLibro = sc.nextLine().toUpperCase();
 		System.out.print("Introduzca el nombre del autor del libro: ");
 		String nombreAutor = sc.nextLine();
 		System.out.print("Introduzca el año de publicación del libro: ");
@@ -79,7 +79,7 @@ public class GestionaLibrosApp {
 		System.out.println("BUSCAR LIBRO POR TÍTULO");
 		System.out.println("------------------------");
 		System.out.print("Introduzca el texto de búsqueda (Es sensible a mayusculas):  ");
-		String buscarLibro = sc.nextLine();
+		String buscarLibro = sc.nextLine().toUpperCase();
 		for (Libro l : biblioteca) {
 			if (l.getTitulo().contains(buscarLibro)) {
 				encontrado = true;

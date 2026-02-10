@@ -21,7 +21,7 @@ public class ListaEntero {
 				System.out.println("()");
 			}else
 				for(Integer l : lista) {
-					System.out.println(l);
+					System.out.print(l + " ");
 				}
 	}
 	
