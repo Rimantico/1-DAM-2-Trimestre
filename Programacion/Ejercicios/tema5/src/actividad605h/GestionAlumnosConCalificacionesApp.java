@@ -1,10 +1,12 @@
-package actividad605g;
+package actividad605h;
 
-import java.util.Scanner;
-import java.util.List;
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
-public class GestionaAlumnosApp {
+import actividad605g.Alumno;
+
+public class GestionAlumnosConCalificacionesApp {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
@@ -18,7 +20,7 @@ public class GestionaAlumnosApp {
 			System.out.println("2.- Listar alumnos existentes");
 			System.out.println("3.- Eliminar alumno");
 			System.out.println("0.- Salir de la aplicación");
-			System.out.println("Elija una opción (0-3):");
+			System.out.print("Elija una opción (0-5):");
 			opcion = Integer.parseInt(sc.nextLine());
 
 			switch (opcion) {
@@ -48,11 +50,11 @@ public class GestionaAlumnosApp {
 
 		System.out.println("AÑADIR ALUMNO");
 		System.out.println("---------------");
-		System.out.println("Introduzca el DNI del alumno (9 caracteres): ");
+		System.out.print("Introduzca el DNI del alumno (9 caracteres): ");
 		String introducirDNI = sc.nextLine().toUpperCase();
-		System.out.println("Introduzca el nombre del alumno (no puede dejarse en blanco): ");
+		System.out.print("Introduzca el nombre del alumno (no puede dejarse en blanco): ");
 		String introducirNombre = sc.nextLine();
-		System.out.println("Introduzca la edad del alumno(Debe de ser mayor o igual a cero): ");
+		System.out.print("Introduzca la edad del alumno(Debe de ser mayor o igual a cero): ");
 		int introducirEdad = Integer.parseInt(sc.nextLine());
 
 		Alumno alumno = new Alumno(introducirDNI, introducirNombre, introducirEdad);
@@ -83,7 +85,6 @@ public class GestionaAlumnosApp {
 			} else
 				System.out.println("El DNI introducido no ha sido encontrado");
 		}
-
-		;
 	}
+
 }

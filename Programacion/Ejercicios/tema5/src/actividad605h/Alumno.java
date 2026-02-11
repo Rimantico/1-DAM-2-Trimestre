@@ -1,4 +1,4 @@
-package actividad605g;
+package actividad605h;
 
 public class Alumno {
 	
@@ -7,6 +7,7 @@ public class Alumno {
 	private String dni;
 	private String nombre;
 	private int edad;
+	private double nota = -1;
 	
 	public Alumno(String dni , String nombre , int edad) {
 		if(dni.length() > 9  || dni.length()<9) {
@@ -41,8 +42,10 @@ public class Alumno {
 	
 	@Override
 	public String toString() {
-		
-		return "DNI: " + dni + "\n" + "Nombre: " + nombre + "\n" + "Edad: " + edad + "\n";
+		if(nota == -1) {
+			System.out.println("La nota no se ha introducido todavía");
+		}
+		return "DNI: " + dni + "\n" + "Nombre: " + nombre + "\n" + "Edad: " + edad + "\n" + "Nota: "  + nota;
 	}
 	
 
