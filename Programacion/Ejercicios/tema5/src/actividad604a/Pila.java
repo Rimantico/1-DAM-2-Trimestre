@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Pila <T>{
+	
+	// Attributes
+	
 	private List<T> elementos;
 
 	

@@ -42,10 +42,12 @@ public class Alumno {
 	
 	@Override
 	public String toString() {
+		String textoNota = null;
 		if(nota == -1) {
-			System.out.println("La nota no se ha introducido todavía");
-		}
-		return "DNI: " + dni + "\n" + "Nombre: " + nombre + "\n" + "Edad: " + edad + "\n" + "Nota: "  + nota;
+			 textoNota = "No introducida";
+		}else
+			String.valueOf(nota);
+		return "DNI: " + dni + "\n" + "Nombre: " + nombre + "\n" + "Edad: " + edad + "\n" + "Nota: "  + textoNota;
 	}
 	
 
