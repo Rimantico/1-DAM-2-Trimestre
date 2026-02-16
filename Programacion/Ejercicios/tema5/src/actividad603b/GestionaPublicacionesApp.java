@@ -36,9 +36,9 @@ public class GestionaPublicacionesApp {
 				System.out.println("--------------------");
 				System.out.print("¿Qué tipo de publicación quiere crear, libro o revista? (l/r): ");
 				String eleccion = sc.nextLine().toLowerCase();
-				if (eleccion.equals("r")) {
+				if (eleccion.equals("l")) {
 					libros.add(agregarLibro(sc));
-				} else if (eleccion.equals("l")) {
+				} else if (eleccion.equals("r")) {
 					revistas.add(agregarRevista(sc));
 				} else
 					System.out.println("Por favor introduzca una letra válida");

@@ -1,4 +1,4 @@
-package actividad607a;
+package actvidad607b;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -50,7 +50,7 @@ public class DiccionarioSpanishEnglish {
 		String traduccion = traductor.get(palabra);
 		
 		if(traduccion != null) {
-			System.out.println("La traducción de " + palabra + "es " + traduccion);
+			System.out.println("La traducción de " + palabra + " es " + traduccion);
 		}else
 			System.out.println("La palabra no está en el diccionario");
 	}

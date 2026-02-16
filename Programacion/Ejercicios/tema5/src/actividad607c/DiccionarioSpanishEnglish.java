@@ -1,4 +1,4 @@
-package actividad607a;
+package actividad607c;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -54,6 +54,13 @@ public class DiccionarioSpanishEnglish {
 		}else
 			System.out.println("La palabra no está en el diccionario");
 	}
+
+	public void getValoresEnglish() {
+	    for(String valor : traductor.values()) {
+	        System.out.println(valor);
+	    }
+	}
+
 		
 	
 	
