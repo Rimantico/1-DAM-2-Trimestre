@@ -6,6 +6,7 @@ let btnRosa = document.getElementById('btnrosa');
 let btnReset = document.getElementById('btnreset');
 let box = document.querySelector('.box');
 
+// Poner color boton
 
 function setColorRojo() {
   if(btnRojo.value == "rojo") {
@@ -41,4 +42,11 @@ function setColorReset() {
   if(btnReset.value == "reset") {
     box.style.background = "#000000";
   }
+}
+
+btnRojo.addEventListener("mouseover" ,botonEncimaRojo)
+// Animación cuando pase por encima el boton
+
+function botonEncimaRojo(){
+  btnRojo.style.transform ="scale(1.5 , 2.5)"
 }
