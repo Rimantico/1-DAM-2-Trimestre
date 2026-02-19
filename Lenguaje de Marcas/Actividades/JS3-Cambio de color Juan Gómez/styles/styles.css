@@ -7,10 +7,16 @@ body {
     background: rgb(32, 61, 37);
 }
 
+.texto{
+    display: flex;
+    flex-direction: column;
+}
+
 .contenido {
     width: 100vw;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     color: black;
@@ -18,7 +24,7 @@ body {
 
 .botones{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 input {

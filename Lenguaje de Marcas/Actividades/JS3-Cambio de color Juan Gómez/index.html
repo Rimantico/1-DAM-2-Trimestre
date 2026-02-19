@@ -11,6 +11,9 @@
 </head>
 <body>
     <div class="contenido"> 
+        <section class="texto">
+            <h1 id="titulo">Botones que cambian el color</h1>
+        </section>
         <section class="botones">
             <input type="button" value="rojo" id="btnrojo" onclick="setColorRojo()" >
             <input type="button" value="verde" id="btnverde" onclick="setColorVerde()" >
@@ -18,7 +21,9 @@
             <input type="button" value="amarillo" id="btnamarillo" onclick="setColorAmarillo()">
             <input type="button" value="rosa" id="btnrosa" onclick="setColorRosa()">
             <input type="button" value="reset" id="btnreset" onclick="setColorReset()">
+            <input type="button" value="imagen" id="btnimagen" onclick="cambiarImagen()">
         </section>
+        
         <div class="box">
             <div id="infoRojo" style="display: none;">Va a elegir el color rojo</div>
             <div id="infoVerde" style="display: none;">Va a elegir el color Verde</div>
@@ -26,7 +31,11 @@
             <div id="infoAmarillo" style="display: none;">Va a elegir el color Amarillo</div>
             <div id="infoRosa" style="display: none;">Va a elegir el color Rosa</div>
             <div id="infoReset" style="display: none;">Vas a hacer un reset </div>
+        
     </div>
+    <section class="multimedia">
+            <img id="imagen" src="./images/imagen1.jfif" alt="">
+        </section>
     <script src="js/changecolor.js"></script>
 </body>
 </html>
