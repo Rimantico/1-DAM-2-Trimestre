@@ -1,0 +1,182 @@
+/* Plantilla */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #282c34;
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+header nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.logocabecera {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+main {
+    padding: 20px;
+    min-height: 80vh;
+    background-color: #1c1e23;
+    color: white;
+}
+
+footer {
+    background-color: #282c34;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Observar información sobre los equipos. Plantilla parecida que en la de pilotos */
+.overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 12px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity .2s ease, transform .2s ease;
+    transform: translateY(6px);
+}
+
+.carta:hover .overlay,
+.carta:focus-within .overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.carta {
+    position: relative;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+.carta img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Diseño de los equipos de la parrilla de la temporada 2025 */
+
+.equipos {
+    display: flex;
+    justify-content: space-around;
+    width: 100vw;
+}
+
+.imagen-equipos {
+    width: 40vw
+}
+
+
+.equipos article {
+    width: 45vw;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+
+.equipos article:hover {
+    transform: scale(1.02);
+    transition: all 0.3s ease-in-out;
+    text-decoration: underline;
+}
+
+
+#mclaren {
+    background-color: #F47600;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+#mercedes {
+    background-color: #00D2BE;
+    color: black;
+    padding: 10px;
+    text-align: center;
+}
+
+#redbull {
+    background-color: #1E41FF;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+#ferrari {
+    background-color: #DC0000;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+#williams {
+    background-color: #005AFF;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+#racingbulls {
+    background-color: #1E41FF;
+    color: white;
+    padding: 10px;
+    text-align: center;
+
+}
+
+#astonmartin {
+    background-color: #229971;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+#haas {
+    background-color: #FFFFFF;
+    color: black;
+    padding: 10px;
+    text-align: center;
+}
+
+#sauber {
+    background-color: #01C00E;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+#alpine {
+    background-color: #2173B8;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}

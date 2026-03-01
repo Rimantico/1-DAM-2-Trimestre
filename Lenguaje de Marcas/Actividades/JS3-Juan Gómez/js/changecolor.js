@@ -91,16 +91,59 @@ btnImagen.addEventListener('click', cambiarImagen)
 
 // Actividad 2
 
-let horario = new Date()
+let fechaCompleta = document.createElement('p');
+fechaCompleta.style.color = "white";
+contenido.insertBefore(fechaCompleta, contenido.firstChild);
 
-let hora = horario.getHours().toString().padStart(2, '0')
-let minutos = horario.getMinutes().toString().padStart(2, '0')
-let segundos = horario.getSeconds().toString().padStart(2, '0')
+function actualizarFechaHora() {
+  const horario = new Date();
+  const hora = horario.getHours().toString().padStart(2, '0');
+  const minutos = horario.getMinutes().toString().padStart(2, '0');
+  const segundos = horario.getSeconds().toString().padStart(2, '0');
+  const dia = horario.getDate().toString().padStart(2, '0');
+  const mes = (horario.getMonth() + 1).toString().padStart(2, '0');
+  const anio = horario.getFullYear().toString();
 
-let dia = horario.getDay().toString().padStart(2, '0')
-let mes = horario.getMonth().toString().padStart(2, '0')
-let anio = horario.getFullYear().toString().padStart(2, '0')
+  fechaCompleta.textContent = `${dia}/${mes}/${anio} ${hora}:${minutos}:${segundos}`;
+}
 
-let fechaCompleta = `${dia}:${mes + 1}:${anio}`
+actualizarFechaHora();
+setInterval(actualizarFechaHora, 1000);
 
-contenido.insertBefore(fechaCompleta, contenido.firstChild)
+// Actividad 3
+
+function intervalo3Minutos(){
+  setInterval(() => {
+    const continuar = confirm("¿Deseas continuar viendo la página?");
+    if (!continuar) {
+      window.location.href = "https://www.google.com";
+    }
+}, 1800000);
+}
+intervalo3Minutos()
+
+// Actividad 4
+
+const altoAnchoTexto = document.createElement('p');
+
+altoAnchoTexto.style.color = "white";
+contenido.insertBefore(altoAnchoTexto, contenido.firstChild);
+
+function actualizarAltoAncho() {
+  const ancho = window.innerWidth;
+  const alto = window.innerHeight;
+  altoAnchoTexto.textContent = `Ancho: ${ancho}px, Alto: ${alto}px`;
+}
+actualizarAltoAncho();
+window.addEventListener('resize', actualizarAltoAncho);
+
+// Actividad 5
+
+let btnOculto = document.getElementById('btnoculto');
+
+function ocultarBoton() {
+  if (btnOculto.value == "oculto") {
+    btnOculto.style.display = "none";
+  }
+}
+btnOculto.addEventListener('click', ocultarBoton)

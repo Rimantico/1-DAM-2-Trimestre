@@ -1,0 +1,81 @@
+/* Plantilla de la página */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #282c34;
+    padding: 20px;
+    height: 15vh;
+    color: white;
+    text-align: center;
+}
+
+header nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.logocabecera {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #282c34;
+}
+
+main {
+    padding: 20px;
+    padding-bottom: 10vh;
+    min-height: 80vh;
+    background-color: #1c1e23;
+    color: white;
+    overflow-y: auto;
+}
+
+footer {
+    background-color: #282c34;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Atributos de la tabla de clasificación */
+table {
+    width: 80vw;
+    margin: auto;
+    margin-top: 20px;
+    border-collapse: collapse;
+    background-color: #2c2f36;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+tr {
+    border-bottom: 2px solid white;
+
+}
+
+th,
+td {
+    padding: 12px 15px;
+    text-align: left;
+    align-items: center;
+}
+
+tr:hover {
+    background-color: #333842;
+}

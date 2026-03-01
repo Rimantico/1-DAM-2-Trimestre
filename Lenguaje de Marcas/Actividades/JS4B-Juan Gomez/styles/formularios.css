@@ -1,0 +1,93 @@
+/* Plantilla un tanto modificada porque la página se me rompia por alguna razón */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #1c1e23;
+    color: #fff;
+}
+
+header {
+    background: #282c34;
+    color: #fff;
+    padding: 16px;
+    text-align: center;
+}
+
+header nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer {
+    background: #282c34;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.logocabecera {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 16px;
+}
+
+/* El titulo de Formularios por alguna razon me aparecía en un lado del primer formulario. Con esto lo he conseguido arreglar  */
+main>h1 {
+    flex: 1 1 100%;
+    margin-bottom: 12px;
+}
+
+/* Estilo de los cuestionarios */
+
+.cuestionarios {
+    background: #212326;
+    padding: 12px;
+    border-radius: 6px;
+    flex: 1 1 45%;
+    min-width: 240px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #333;
+    background: #111;
+    color: #fff;
+}
+
+button {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: none;
+    background: #eb2f00;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+}

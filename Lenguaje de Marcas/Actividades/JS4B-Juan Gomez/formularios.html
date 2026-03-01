@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+    <link rel="stylesheet" href="./styles/formularios.css">
+</head>
+
+<body>
+    <!-- Cabecera -->
+    <header>
+        <a href="./index.html"><img class="logocabecera" src="./images/F1_logo.png" alt=""></a>
+        <nav>
+            <a href="./equipos.html">Equipos</a>
+            <a href="./pilotos.html">Pilotos</a>
+            <a href="./pilotoclasf.html">Clasificación de Pilotos</a>
+            <a href="./euqiposclasf.html">Clasificación de Equipos</a>
+            <a href="./formularios.html">Formularios</a>
+            <a href="./carusel.html">Carusel</a>
+        </nav>
+    </header>
+    <main>
+        <!-- Pagina de formularios variados que pienso que mas o menos encuandran con mi página web -->
+        <h1>Formularios sobre la F1</h1>
+
+        <section class="cuestionarios">
+            <h2>Contacto</h2>
+            <form id="contacto" action="#" method="post">
+                <label>Nombre<br><input type="text" name="nombre" required></label>
+                <label>Email<br><input type="email" name="email" required></label>
+                <label>Asunto<br><input type="text" name="asunto"></label>
+                <label>Mensaje<br><textarea name="mensaje" rows="4" required></textarea></label>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+        <section class="cuestionarios">
+            <h2>Suscripción a newsletter</h2>
+            <form id="suscripcion" action="#" method="post">
+                <label>Email<br><input type="email" name="email" required></label>
+                <label>Nombre (opcional)<br><input type="text" name="nombre"></label>
+                <button type="submit">Suscribirse</button>
+            </form>
+        </section>
+
+        <section class="cuestionarios">
+            <h2>Registro de usuario</h2>
+            <form id="registro" action="#" method="post">
+                <label>Usuario<br><input type="text" name="usuario" required></label>
+                <label>Email<br><input type="email" name="email" required></label>
+                <label>Contraseña<br><input type="password" name="password" minlength="8" required></label>
+                <label>Confirmar contraseña<br><input type="password" name="confirm_password" minlength="8"
+                        required></label>
+                <button type="submit">Registrarse</button>
+            </form>
+        </section>
+
+        <section class="cuestionarios">
+            <h2>Inicio de sesión</h2>
+            <form id="login" action="#" method="post">
+                <label>Email o usuario<br><input type="text" name="user" required></label>
+                <label>Contraseña<br><input type="password" name="password" required></label>
+                <button type="submit">Entrar</button>
+            </form>
+        </section>
+
+        <section class="cuestionarios">
+            <h2>Reportar incidencia / Feedback</h2>
+            <form id="feedback" action="#" method="post" enctype="multipart/form-data">
+                <label>Tipo<br>
+                    <select name="tipo">
+                        <option value="bug">Bug</option>
+                        <option value="sugerencia">Sugerencia</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </label>
+                <label>Página afectada<br><input type="text" name="pagina"></label>
+                <label>Descripción<br><textarea name="descripcion" rows="4" required></textarea></label>
+
+                <button type="submit">Enviar reporte</button>
+            </form>
+        </section>
+
+    </main>
+    <footer>
+        <p>Derechos reservados © 2024 Juan Gómez Ruiz</p>
+    </footer>
+</body>
+
+</html>
