@@ -1,6 +1,7 @@
 package act3;
 
 public interface Operacion {
-	void calcular(double a, double b);
-
+	
+	
+	double calcular(double a, double b);
 }
