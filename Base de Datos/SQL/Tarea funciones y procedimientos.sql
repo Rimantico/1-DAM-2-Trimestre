@@ -15,16 +15,82 @@ Select categoria , Prefijo(Categoria,3) AS Prefijo_Categoria FROM categorias;
 
 -- 2. Crea una función Iniciales_Empleado que devuelva las iniciales en mayúsculas a partir de un id de Empleado. Ejemplo: El empleado Pepe López con id=8 (Nombre "Pepe", Apellido "López") devolverá "PL".
 
+DROP FUNCTION Iniciales_Empleado;
+
 DELIMITER $$
 
-CREATE FUNCTION Iniciales_Empleado(ID INT)
+CREATE FUNCTION Iniciales_Empleado(ID_Empleado INT)
 RETURNS CHAR(2)
 DETERMINISTIC
 BEGIN
-	select nombre , apellidos from empleados WHERE id = ID;
-	RETURN CONCAT(UPPER(LEFT(nombre,1)),UPPER(LEFT(apellidos,1)));
+	DECLARE v_iniciales CHAR(2);
+
+
+   SELECT CONCAT(UPPER(LEFT(nombre,1)),UPPER(LEFT(apellidos,1)))
+   INTO v_iniciales
+   FROM empleados
+   WHERE id = ID_Empleado;
+   
+   RETURN v_iniciales;
+    
 END $$
 
 DELIMITER ;
 
-Select id , Iniciales_Empleado("4") as IncialesEmpleado from empleados
+SELECT Iniciales_Empleado(3);
+
+
+
+-- 3. Crea una función Edad_Empleado que devuelva la edad de un empleado. El parámetro de entrada será el id del empleado.
+
+DROP FUNCTION Edad_Empleado;
+
+
+DELIMITER $$
+
+
+CREATE FUNCTION Edad_Empleado(ID_Empleado INT)
+RETURNS INT
+DETERMINISTIC
+BEGIN
+
+DECLARE v_años INT;
+
+SELECT TIMESTAMPDIFF(YEAR, fecha_nacimiento, CURDATE()) 
+INTO v_años 
+FROM empleados
+where id=ID_Empleado;
+
+RETURN v_años;
+
+END $$
+
+DELIMITER ;
+
+select Edad_Empleado(4);
+
+-- 4. Crea un procedimiento Empleados_por_sexo que tenga como entrada un parámetro con dos posibles valores: "HOMBRE", "MUJER".
+-- Deberá mostrar por pantalla los datos de los empleados del sexo solicitado. Así como la edad de cada empleado.
+
+select nombre , tratamiento from empleados;
+
+DELIMITER $$
+
+CREATE PROCEDURE Empleados_Sexo(IN GENERO VARCHAR(6))
+BEGIN
+
+IF GENERO = 'HOMBRE' THEN
+select nombre  , tratamiento
+from empleados 
+where tratamiento IN ('Sr.','Dr.');
+ELSEIF GENERO = 'MUJER' THEN
+select nombre , tratamiento
+from empleados
+where tratamiento IN ('Srta.');
+END IF;
+
+END $$
+
+DELIMITER ;
+
+CALL Empleados_Sexo('HOMBRE')
