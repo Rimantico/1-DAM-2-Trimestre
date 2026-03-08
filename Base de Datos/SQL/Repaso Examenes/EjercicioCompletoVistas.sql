@@ -23,7 +23,7 @@ CREATE TABLE Libros(
 ISBN CHAR(13) PRIMARY KEY,
 Titulo VARCHAR(255),
 Autor INT,
-Editorial CHAR(4),
+Editorial CHAR(5),
 Precio INT,
 FechaEdicion DATE,
 
@@ -92,3 +92,55 @@ WHERE CodigoEditorial = 'E001';
 
 UPDATE Editoriales
 SET CodigoEditorial =CONCAT('ED',SUBSTRING(CodigoEditorial,2));
+
+-- Actividad 4
+
+UPDATE Libros
+SET Precio = (Precio*0.1)+Precio
+WHERE Editorial = 'ED007';
+
+-- Actividad 5
+
+Select * from Libros;
+
+UPDATE Libros
+SET FechaEdicion = DATE_ADD(FechaEdicion, INTERVAL 1 YEAR)
+Where ISBN = '9780000000001';
+
+-- Actividad 6
+
+DELETE FROM Libros
+WHERE Autor = 1;
+
+-- Actividad 7
+
+CREATE VIEW Vista_1 AS
+SELECT
+	ISBN, Titulo, Autor, Editorial, Precio , FechaEdicion, CONCAT(Autores.Apellidos , " " , Autores.Nombre) AS 'Nombre Completo'
+FROM
+	Libros
+INNER JOIN Autores on Libros.Autor = Autores.CodigoAutor;
+
+SELECT * FROM Vista_1;
+
+-- Actividad 8
+
+CREATE VIEW Vista_2 AS
+SELECT 
+	ISBN, Titulo, Autor, Precio, FechaEdicion, CONCAT(LEFT(Autores.Nombre,1),".",Autores.Apellidos) AS 'Nombre Con Iniciales'
+FROM
+	Libros
+INNER JOIN Autores ON Libros.Autor = Autores.CodigoAutor;
+
+SELECT * from Vista_2;
+
+-- Actividad 9
+
+RENAME TABLE Vista_1 TO V_libros_NombreCompleto;
+
+RENAME TABLE Vista_2 TO V_libros_NombreConIniciales;
+
+-- Actividad 10
+
+SHOW FULL TABLES FROM bd_libreria
+WHERE table_type = 'VIEW';
