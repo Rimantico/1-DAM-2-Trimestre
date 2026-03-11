@@ -144,3 +144,5 @@ RENAME TABLE Vista_2 TO V_libros_NombreConIniciales;
 
 SHOW FULL TABLES FROM bd_libreria
 WHERE table_type = 'VIEW';
+
+DROP VIEW V_libros_NombreCompleto;
