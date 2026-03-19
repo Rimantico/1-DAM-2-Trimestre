@@ -7,6 +7,8 @@ for (let i = 0; i <= 250; i++) {
     elementos.push(i);
 }
 
+
+
 // Apartado 2 y 3
 let indice = 0;
 const elementoDisplay = document.getElementById("cambionumero");

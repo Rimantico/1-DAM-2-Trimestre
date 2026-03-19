@@ -60,7 +60,8 @@ document.getElementById("jugador2").innerHTML = jugador2;
 document.getElementById("numeroaleatorio").innerHTML = numeroAleatorio;
 
 // Se ejecute la función que indique
-document.getElementById("botonjugador1").addEventListener("click",presionarBotonJugador1);
+let btn1=document.getElementById("botonjugador1").addEventListener("click",presionarBotonJugador1);
+let btn2 =document.getElementById("botonjugador2").addEventListener("click",presionarBotonJugador2)
 
 function presionarBotonJugador1() {
     if(juegoTerminado){
@@ -68,6 +69,7 @@ function presionarBotonJugador1() {
     }
     if(turno != 1){
         alert("No es tu turno")
+
         return;
     }
 
@@ -87,5 +89,28 @@ function presionarBotonJugador1() {
     turno = 2;
 }
 function presionarBotonJugador2(){
-    let numeroAleatorio = Math.floor(Math.random() * (25-0) +0);
+
+
+       if(juegoTerminado){
+        return;
+    }
+    if(turno != 2){
+        alert("No es tu turno")
+        return;
+    }
+
+  let numeroAleatorio = Math.floor(Math.random() * (25-0) +0);
+  if(jugador1 >= numeroAleatorio){
+      jugador1 = jugador1 - numeroAleatorio
+      document.getElementById("jugador2").innerHTML = jugador1;
+      document.getElementById("numeroaleatorio").innerHTML = numeroAleatorio
+
+      if(jugador2 == 0){
+        alert("¡Jugador 2 gana!");
+        juegoTerminado = true;
+      }
+      turno = 1;
+  }else
+    alert("No puedes restar mas puntos porque te pasas")
+    turno = 1;
 }
