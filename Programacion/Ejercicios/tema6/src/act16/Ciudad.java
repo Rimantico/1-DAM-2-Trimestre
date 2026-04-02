@@ -4,56 +4,43 @@ public abstract class Ciudad {
 	
 	// Attributes
 	
-	protected String nombre;
-	protected String pais;
-	protected int poblacion;
-	protected String continente;
+	protected String nombreCiudad;
+	protected String paisCiudad;
+	protected String ciudadContinente;
 	
 	// Constructor
 	
-	public Ciudad(String nombre, String pais, int poblacion, String continente) {
-		this.nombre = nombre;
-		this.pais = pais;
-		this.poblacion = poblacion;
-		this.continente = continente;
+	public Ciudad(String nombreCiudad, String paisCiudad, String ciudadContinente) {
+		this.nombreCiudad = nombreCiudad;
+		this.paisCiudad = paisCiudad;
+		this.ciudadContinente = ciudadContinente;
+		
 	}
 	
-	public Ciudad(String nombre, String pais, String continente) {
-		this.nombre = nombre;
-		this.pais = pais;
-		this.continente = continente;
+	// Getters and Setters
+
+	public String getNombreCiudad() {
+		return nombreCiudad;
 	}
 
-	public String getNombre() {
-		return nombre;
+	public void setNombreCiudad(String nombreCiudad) {
+		this.nombreCiudad = nombreCiudad;
 	}
 
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
+	public String getPaisCiudad() {
+		return paisCiudad;
 	}
 
-	public String getPais() {
-		return pais;
+	public void setPaisCiudad(String paisCiudad) {
+		this.paisCiudad = paisCiudad;
 	}
 
-	public void setPais(String pais) {
-		this.pais = pais;
+	public String getCiudadContinente() {
+		return ciudadContinente;
 	}
 
-	public int getPoblacion() {
-		return poblacion;
-	}
-
-	public void setPoblacion(int poblacion) {
-		this.poblacion = poblacion;
-	}
-
-	public String getContinente() {
-		return continente;
-	}
-
-	public void setContinente(String continente) {
-		this.continente = continente;
+	public void setCiudadContinente(String ciudadContinente) {
+		this.ciudadContinente = ciudadContinente;
 	}
 	
 	
