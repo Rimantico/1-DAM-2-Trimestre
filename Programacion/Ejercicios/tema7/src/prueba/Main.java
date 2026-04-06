@@ -22,7 +22,7 @@ public class Main {
 
 	            // Añadir
 	            pw = new PrintWriter(new FileWriter("archivo.txt", true));
-	            pw.println("Segunda linea");
+	            pw.println("Tercera linea");
 	            pw.close();
 
 	            // Leer

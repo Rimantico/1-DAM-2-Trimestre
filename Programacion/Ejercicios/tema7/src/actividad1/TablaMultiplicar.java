@@ -11,7 +11,11 @@ public class TablaMultiplicar {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
-		File tablaMultiplicar = new File("tablaMultiplicar.txt");
+		File carpetaMultiplicar = new File("carpetaMultiplicar");
+		
+		carpetaMultiplicar.mkdir();
+		
+		File tablaMultiplicar = new File("carpetaMultiplicar/tablaMultiplicar.txt");
 		
 		try {
 			tablaMultiplicar.createNewFile();
@@ -29,8 +33,8 @@ public class TablaMultiplicar {
 			System.out.println("Introduzca un número válido");
 		}else {
 			try {
-				PrintWriter escribir = new PrintWriter(new FileWriter("tablaMultiplicar.txt", true));
-				System.out.println("Tabla del " + numero);
+				PrintWriter escribir = new PrintWriter(new FileWriter(tablaMultiplicar, true));
+				escribir.println("Tabla del " + numero);
 				for(int i = 1 ; i<=10; i++ ) {
 					int resultado = numero * i;
                     escribir.println(i + " * " + numero + " : " + resultado);

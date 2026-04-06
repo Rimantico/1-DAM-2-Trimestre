@@ -1,0 +1,3 @@
+Mayor número de espectadores: 8429
+Menor número de espectadores: 3032
+Media de espectadores: 5778.3
