@@ -1,0 +1,22 @@
+
+/* Estilos para la página de la empresa Juanito-Pepito */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+img
+{
+  width: auto;
+    height: 25vh;
+}
+.botonestrabajadores{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}

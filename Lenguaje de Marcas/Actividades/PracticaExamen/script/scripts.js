@@ -61,7 +61,9 @@ document.getElementById("numeroaleatorio").innerHTML = numeroAleatorio;
 
 // Se ejecute la función que indique
 let btn1=document.getElementById("botonjugador1").addEventListener("click",presionarBotonJugador1);
-let btn2 =document.getElementById("botonjugador2").addEventListener("click",presionarBotonJugador2)
+let btn2 =document.getElementById("botonjugador2").addEventListener("click",presionarBotonJugador2);
+
+
 
 function presionarBotonJugador1() {
     if(juegoTerminado){
@@ -69,7 +71,7 @@ function presionarBotonJugador1() {
     }
     if(turno != 1){
         alert("No es tu turno")
-
+        btn2.s
         return;
     }
 

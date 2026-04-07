@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="examenTema4b.Cohete"/>
     <fullyQualifiedTypeName name="examenTema4b.Cohete.TipoEncendido"/>
     <fullyQualifiedTypeName name="examenTema4b.Cohete.TipoCombustible"/>
+    <fullyQualifiedTypeName name="actividad2.Cliente"/>
+    <fullyQualifiedTypeName name="actividad2.Cliente.MetodoPago"/>
+    <fullyQualifiedTypeName name="actividad2.Vehiculo.Modelo"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
 </qualifiedTypeNameHistroy>
